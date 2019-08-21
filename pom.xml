@@ -17,6 +17,16 @@
                 <directory>${basedir}/src/main/resources</directory>
             </resource>
         </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
 
         <outputDirectory>${basedir}/env/classes</outputDirectory>
         <testOutputDirectory>${basedir}/env/test-classes</testOutputDirectory>
