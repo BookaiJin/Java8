@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Test5_2_3 {
-	public static void main(String... args){
-		List<Integer> list1 = Arrays.asList(1,2,3);
-		List<Integer> list2 = Arrays.asList(4,5);
+    public static void main(String... args) {
+        List<Integer> list1 = Arrays.asList(1, 2, 3);
+        List<Integer> list2 = Arrays.asList(4, 5);
 
-		List<Integer[]> result = list1.stream()
-				.flatMap(i->
-						list2.stream()
-							.filter(j -> (i+j) % 3 == 0)
-							.map(j->new Integer[]{i,j}))
-				.collect(Collectors.toList());
-	}
+        List<Integer[]> result = list1.stream()
+                .flatMap(i ->
+                        list2.stream()
+                                .filter(j -> (i + j) % 3 == 0)
+                                .map(j -> new Integer[]{i, j}))
+                .collect(Collectors.toList());
+    }
 }
