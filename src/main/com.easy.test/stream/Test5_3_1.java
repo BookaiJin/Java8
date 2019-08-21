@@ -43,6 +43,7 @@ public class Test5_3_1 {
 //                Session#getUnit is unavailable with reversed ???
 //                .sorted(Comparator.comparingLong(s -> s.getUnit().getCount()).reversed())
                 .sorted(Comparator.comparingLong(s -> s.getUnit().getCount()))
+                .sorted(Comparator.comparingLong((Session s) -> s.getUnit().getCount()).reversed())
                 .collect(Collectors.toList());
     }
 }
