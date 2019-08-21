@@ -40,7 +40,7 @@ public class Test5_3_1 {
                 .reduce(0, Long::sum);
 
         List<Session> sortedSessions = sessions.stream()
-//                Session#getUnit is unavalible with reversed ???
+//                Session#getUnit is unavailable with reversed ???
 //                .sorted(Comparator.comparingLong(s -> s.getUnit().getCount()).reversed())
                 .sorted(Comparator.comparingLong(s -> s.getUnit().getCount()))
                 .collect(Collectors.toList());
