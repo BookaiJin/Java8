@@ -15,6 +15,12 @@ public class Main623 {
 
 
     public TreeNode addOneRow(TreeNode root, int v, int d) {
+        if(d == 1){
+            TreeNode node = new TreeNode(v);
+            node.left = root;
+            root = node;
+            return root;
+        }
         addOneRowDeep(root, v, d-2);
         return root;
     }
