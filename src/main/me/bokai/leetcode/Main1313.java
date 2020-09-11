@@ -22,9 +22,7 @@ public class Main1313 {
         int[] result = new int[count];
         int index = 0;
         for (int i = 0; i < nums.length; i += 2) {
-            for (int j = index; j < index + nums[i]; j++) {
-                result[j] = nums[i + 1];
-            }
+            Arrays.fill(result, index, index + nums[i], nums[i + 1]);
             index += nums[i];
         }
         return result;
